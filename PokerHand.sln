@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerHand", "PokerHand\PokerHand.csproj", "{DA623415-0270-48DF-B4EE-A952D3C6D04E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerHand.Tests", "PokerHand.Tests\PokerHand.Tests.csproj", "{440AFDFC-2165-4ADF-8A04-777BFEDDBF6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cards", "Card\Cards.csproj", "{05D6FDFD-3474-42C5-9663-03D19FE86CF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA623415-0270-48DF-B4EE-A952D3C6D04E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA623415-0270-48DF-B4EE-A952D3C6D04E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA623415-0270-48DF-B4EE-A952D3C6D04E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA623415-0270-48DF-B4EE-A952D3C6D04E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{440AFDFC-2165-4ADF-8A04-777BFEDDBF6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{440AFDFC-2165-4ADF-8A04-777BFEDDBF6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{440AFDFC-2165-4ADF-8A04-777BFEDDBF6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{440AFDFC-2165-4ADF-8A04-777BFEDDBF6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05D6FDFD-3474-42C5-9663-03D19FE86CF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05D6FDFD-3474-42C5-9663-03D19FE86CF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05D6FDFD-3474-42C5-9663-03D19FE86CF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05D6FDFD-3474-42C5-9663-03D19FE86CF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

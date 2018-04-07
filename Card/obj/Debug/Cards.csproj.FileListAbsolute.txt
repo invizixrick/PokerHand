@@ -1,0 +1,5 @@
+C:\Projects\PokerHand\Card\bin\Debug\Cards.dll
+C:\Projects\PokerHand\Card\bin\Debug\Cards.pdb
+C:\Projects\PokerHand\Card\obj\Debug\Cards.dll
+C:\Projects\PokerHand\Card\obj\Debug\Cards.pdb
+C:\Projects\PokerHand\Card\obj\Debug\Cards.csprojResolveAssemblyReference.cache

@@ -1,0 +1,81 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <input id="player1" placeholder="player 1 name" value="zim" style="width: 100px;" />
+        <input id="player1c1" placeholder="card 1" value="3h" style="width: 60px;" />
+        <input id="player1c2" placeholder="card 2" value="4h" style="width: 60px;" />
+        <input id="player1c3" placeholder="card 3" value="7h" style="width: 60px;" />
+        <input id="player1c4" placeholder="card 4" value="9h" style="width: 60px;" />
+        <input id="player1c5" placeholder="card 5" value="Jh" style="width: 60px;" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <input id="player2" placeholder="player 2 name" value="ric" style="width: 100px;" />
+        <input id="player2c1" placeholder="card 1" value="2h" style="width: 60px;" />
+        <input id="player2c2" placeholder="card 2" value="3d" style="width: 60px;" />
+        <input id="player2c3" placeholder="card 3" value="4c" style="width: 60px;" />
+        <input id="player2c4" placeholder="card 4" value="5s" style="width: 60px;" />
+        <input id="player2c5" placeholder="card 5" value="6s" style="width: 60px;" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <button id="winningHand">Get Winner</button>
+    </div>
+</div>
+<script>
+    //alert("first");
+    $(document).ready(function(){
+        function GetRelativeURL(controller, action) {
+            var href = window.location.href.split('/');
+            return href[0] + '//' + href[2] + '/api/' + controller + '/' + action;
+        }
+        $("#winningHand").click(function () {
+            //alert("pc1 is " + player1c1.value);
+            //todo: verify cards are in correct format
+            //todo: verify all cards and name have been provided
+            var hand1 = {
+                playername: player1.value,
+                c1: player1c1.value,
+                c2: player1c2.value,
+                c3: player1c3.value,
+                c4: player1c4.value,
+                c5: player1c5.value,
+            };
+            var hand2 = {
+                playername: player2.value,
+                c1: player2c1.value,
+                c2: player2c2.value,
+                c3: player2c3.value,
+                c4: player2c4.value,
+                c5: player2c5.value,
+            };
+            var game = {
+                Hand1: hand1,
+                Hand2: hand2
+            };
+
+            $.ajax({
+                url: GetRelativeURL("PokerHand", "GetWinner"),
+                type: 'post',
+                contenttype: 'json',
+                datatype: 'json',
+                data: game,
+                success: function (response) {
+                    alert(response + " is the winner!");
+                },
+                error: function (response, textStatus, errorThrown) {
+                    alert("Error : " + errorThrown + " : " + response.responseText);
+                }
+            });
+        });
+    });
+</script>
